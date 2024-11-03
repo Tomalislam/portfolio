@@ -104,3 +104,16 @@ body {
     margin: 0 0.5em;
     text-decoration: none;
 }
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1em 0;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
