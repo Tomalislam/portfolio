@@ -1,0 +1,106 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#header h1 {
+    font-size: 2.5em;
+}
+
+#header p {
+    font-size: 1.2em;
+}
+
+#header nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#header nav a:hover {
+    color: #ff6347;
+}
+
+/* About Section */
+#about, #projects, #contact {
+    padding: 4em 0;
+    text-align: center;
+}
+
+#about h2, #projects h2, #contact h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.project-grid {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #f4f4f4;
+    padding: 1em;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.project h3 {
+    margin-bottom: 0.5em;
+}
+
+.project p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.project a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+/* Contact Section */
+#contact a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a {
+    color: #555;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
