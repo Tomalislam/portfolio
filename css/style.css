@@ -130,22 +130,23 @@ canvas {
     margin: 10px 0;
 }
 
-/* Additional Animation on Hover */
+/* Water Ripple Effect */
 .social-card::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300%;
-    height: 300%;
-    background: rgba(255, 255, 255, 0.2);
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
-    transition: transform 0.5s ease;
     transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
     pointer-events: none;
 }
 
 .social-card:hover::before {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(10); /* Increases the circle to create ripple effect */
+    opacity: 0;
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
 }
-
