@@ -98,3 +98,49 @@ canvas {
     visibility: visible;
     opacity: 1;
 }
+/* Container styling */
+.social-card {
+    background: linear-gradient(135deg, #ff8a00, #e52e71); /* Custom gradient */
+    border-radius: 15px;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating effect */
+.social-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Inside content */
+.social-content img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.social-content h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Optional: add a subtle floating animation */
+.social-card {
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
