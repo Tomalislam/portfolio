@@ -98,28 +98,28 @@ canvas {
     visibility: visible;
     opacity: 1;
 }
-/* Container styling */
+/* Social Card Basic Styling */
 .social-card {
-    background: linear-gradient(135deg, #ff8a00, #e52e71); /* Custom gradient */
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
     border-radius: 15px;
     width: 200px;
     padding: 20px;
     text-align: center;
     color: white;
+    position: relative;
+    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
 }
 
-/* Floating effect */
+/* Floating Effect */
 .social-card:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Inside content */
+/* Content inside the card */
 .social-content img {
     width: 50px;
     margin-bottom: 10px;
@@ -130,17 +130,22 @@ canvas {
     margin: 10px 0;
 }
 
-/* Optional: add a subtle floating animation */
-.social-card {
-    animation: float 5s ease-in-out infinite;
+/* Additional Animation on Hover */
+.social-card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
+.social-card:hover::before {
+    transform: translate(-50%, -50%) scale(1);
 }
 
